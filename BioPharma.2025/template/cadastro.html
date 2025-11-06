@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro da BioPharma</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        h1 {
+            color: #2ab135;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+        }
+        
+        label {
+            margin-top: 10px;
+        }
+        
+        input,
+        select {
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #2ab135;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #249e2e;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Cadastro de Cliente</h1>
+    <form id="formCadastro" method="POST">
+        <label>Nome:</label>
+        <input type="text" name="nome" required>
+
+        <label>CPF:</label>
+        <input type="text" name="cpf" required>
+
+        <label>Data de Nascimento:</label>
+        <input type="date" name="data_nascimento">
+
+        <label>Sexo:</label>
+        <select name="sexo">
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Outro">Outro</option>
+        </select>
+
+        <label>Telefone:</label>
+        <input type="text" name="telefone">
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Endereço:</label>
+        <input type="text" name="endereco">
+
+        <label>Cidade:</label>
+        <input type="text" name="cidade">
+
+        <label>Estado:</label>
+        <input type="text" name="estado">
+
+        <button type="submit" id=" Cadastrar">Cadastrar</button>
+    </form>
+    
+
+</html>
+
+</html>
+
+</html>

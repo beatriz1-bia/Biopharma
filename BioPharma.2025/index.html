@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BioPharma</title>
+  <link rel="stylesheet" href="style/css.css">
+  
+</head>
+
+<body>
+  <header>
+    <div class="logo-area">
+      <img src="img/logo biopharma.jpg" alt="Logo da loja">
+      <h1>BioPharma</h1>
+    </div>
+
+    <div class="user-area">
+      <p>Olá, bem-vindo(a)! <a href="template/entra.html">Entrar</a></p>
+      <button class="carrinho">🛒</button>
+    </div>
+  </header>
+
+  <div class="categorias-container">
+
+    <button id="categorias-btn">☰ Todas as Categorias</button>
+
+    <nav class="menu-links">
+      <a href="#">Super Ofertas <span></span></a>
+      <a href="#">Recompensa Programada <span></span></a>
+      <a href="#">Serviços de Saúde <span></span></a>
+      <a href="#">Marcas Exclusivas <span></span></a>
+    </nav>
+
+
+    <div class="search-area">
+      <input type="text" id="search" placeholder="Pesquisar...">
+      <button id="search-btn">🔍</button>
+
+    </div>
+    <ul id="categorias-lista" class="categorias-lista">
+      <li><a href="#">Medicamentos</a></li>
+      <li><a href="#">Beleza</a></li>
+      <li><a href="#">Mamãe e Bebês</a></li>
+      <li><a href="#">Cabelo</a></li>
+      <li><a href="#">Vida Saudável</a></li>
+      <li><a href="#">Pet</a></li>
+      <li><a href="#">Higiene Pessoal</a></li>
+    </ul>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const categoriasBtn = document.getElementById("categorias-btn");
+      const categoriasLista = document.getElementById("categorias-lista");
+
+      categoriasBtn.addEventListener("click", () => {
+
+        if (categoriasLista.style.display === "block") {
+          categoriasLista.style.display = "none";
+        } else {
+          categoriasLista.style.display = "block";
+        }
+      });
+
+      window.addEventListener("click", (e) => {
+        if (!categoriasBtn.contains(e.target) && !categoriasLista.contains(e.target)) {
+          categoriasLista.style.display = "none";
+        }
+      });
+    });
+
+  </script>
+
+  <div class="faixa-categorias">
+    <div class="botao">
+      <div class="item">
+        <img src="img/blacfriderredonda.jpg" alt="foto" class="fotos">
+        <p>Black</p>
+
+      </div>
+
+      <div class="item">
+        <div class="icon">💊</div>
+        <p>Medicamentos</p>
+      </div>
+
+      <div class="item">
+        <div class="icon">🧴</div>
+        <p>Cuidados</p>
+      </div>
+
+      <div class="item">
+        <div class="icon">💚</div>
+        <p>Exclusivo do site</p>
+      </div>
+
+      <div class="item">
+        <div class="icon">💪</div>
+        <p>Vitaminas</p>
+      </div>
+
+      <div class="item">
+        <div class="icon">🎁</div>
+        <p>Ofertas Frias</p>
+      </div>
+
+      <div class="item">
+        <div class="icon">👀</div>
+        <p>Leve 2 Pague 1</p>
+      </div>
+
+      <div class="item">
+        <div class="icon">📓</div>
+        <p>Cupons</p>
+      </div>
+
+      <div class="item">
+        <div class="icon">💉</div>
+        <p>Vacinas</p>
+      </div>
+
+      <div class="item">
+        <div class="icon">⤵️</div>
+        <p>Mais por menos</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="carousel">
+    <img src="img/imagem1.jpg" class="carousel-img active" alt="Imagem 1">
+    <img src="img/imagem2.jpg" class="carousel-img" alt="Imagem 2">
+    <img src="img/imagem3.jpg" class="carousel-img" alt="Imagem 3">
+    <img src="img/imagem4.jpg" class="carousel-img" alt="Imagem 4">
+  </div>
+
+  <script>
+    const images = document.querySelectorAll('.carousel-img');
+    let current = 0;
+
+    function nextImage() {
+      images[current].classList.remove('active');
+      current = (current + 1) % images.length;
+      images[current].classList.add('active');
+    }
+
+    setInterval(nextImage, 3000); 
+  </script>
+
+  <div class="imagem">
+    <img src="img/frider.jpg" alt="foto 1" class="imagem-foto">
+    <img src="img/blck.jpg" alt=" foto 2" class="imagem-foto">
+    <img src="img/black.jpg" alt=" foto 3">
+    <img src="img/blackfrider.jpg" alt=" foto 4">
+
+  </div>
+  <main>
+    <div class="frete-gratis">
+      <div class="icon">
+
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 3H17V15H3V3Z" stroke="#007BFF" stroke-width="2" />
+          <path d="M17 8H21L23 11V15H17V8Z" stroke="#007BFF" stroke-width="2" />
+          <circle cx="7" cy="18" r="2" stroke="#007BFF" stroke-width="2" />
+          <circle cx="19" cy="18" r="2" stroke="#007BFF" stroke-width="2" />
+        </svg>
+      </div>
+      <div class="text">
+        <p><a href="">Frete Grátis</a></p>
+        <span>a partir R$150*</span>
+      </div>
+    </div>
+
+    <div class="clique-retire">
+      <div class="icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 3H21V21H3V3Z" stroke="#007BFF" stroke-width="2" />
+          <path d="M3 9H21" stroke="#007BFF" stroke-width="2" />
+          <path d="M12 9V21" stroke="#007BFF" stroke-width="2" />
+        </svg>
+      </div>
+      <div class="text">
+        <p><a href="">Clique e Retire</a></p>
+        <span>Em até 1 hora*</span>
+      </div>
+    </div>
+
+    <div class="atendimento-24h">
+      <div class="icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" stroke="#007BFF" stroke-width="2" />
+          <path d="M12 6V12L16 14" stroke="#007BFF" stroke-width="2" />
+        </svg>
+      </div>
+      <div class="text">
+        <p><a href="">Atendimento 24h</a></a></p>
+        <span>Estamos aqui para você</span>
+      </div>
+    </div>
+
+
+    <div class="cartao-parcelado">
+      <div class="icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="6" width="20" height="12" rx="2" stroke="#007BFF" stroke-width="2" />
+          <line x1="2" y1="10" x2="22" y2="10" stroke="#007BFF" stroke-width="2" />
+        </svg>
+      </div>
+      <div class="text">
+        <p><a href="">Parcelamento no Cartão</a> </p>
+        <span>Até 10x sem juros</span>
+      </div>
+    </div>
+
+    <div class="compra-segura">
+      <div class="icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 10V7C6 4.23858 8.23858 2 11 2C13.7614 2 16 4.23858 16 7V10" stroke="#007BFF" stroke-width="2" />
+          <rect x="5" y="10" width="14" height="12" rx="2" stroke="#007BFF" stroke-width="2" />
+        </svg>
+      </div>
+      <div class="text">
+        <p><a href="">Compra 100% Segura</a> </p>
+        <span>Protegida para você</span>
+      </div>
+    </div>
+  </main>
+
+  <div class="carrossel-farmacia"> 
+     <h2>Ofertas imperdiveis</h2><br>
+    <button class="btn-farmacia prev">❮</button>
+    <div class="carrossel-farmacia-track">
+
+      <div class="item-farmacia">
+        <img src="img/Paracetamol.jpeg" alt="Paracetamol 750mg">
+        <h3>Paracetamol 750mg</h3>
+        <p>R$ 9,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="item-farmacia">
+        <img src="img/dipirona.jpeg" alt="Dipirona">
+        <h3>Dipirona 500mg</h3>
+        <p>R$ 7,50</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="item-farmacia">
+        <img src="img/Algodão.jpeg" alt="Algodão">
+        <h3>Algodão</h3>
+        <p>R$ 5,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="item-farmacia">
+        <img src="img/Sabonete de glicerina.jpeg" alt="Sabonete Glicerina">
+        <h3>Sabonete Glicerina</h3>
+        <p>R$ 17,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="item-farmacia">
+        <img src="img/mascara.jpeg" alt="Máscara">
+        <h3>Máscara cirúrgica</h3>
+        <p>R$ 11,00</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="item-farmacia">
+        <img src="img/Atroveran.jpeg" alt="Atroveran">
+        <h3>Atroveran</h3>
+        <p>R$ 12,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Grupo 2 -->
+      <div class="item-farmacia">
+        <img src="img/protetor solar.jpeg" alt="Protetor Solar">
+        <h3>Protetor Solar FPS 50</h3>
+        <p>R$ 29,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="item-farmacia">
+        <img src="img/omebrazol.jpeg" alt="omeprazol">
+        <h3>omeprazol</h3>
+        <p>R$ 4,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="item-farmacia">
+        <img src="img/pasta de dente carvao ativado colgate.jpeg" alt="Escova Dental">
+        <h3> Pasta de Dente Carvão Ativado Colgate</h3>
+        <p>R$ 8,50</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="item-farmacia">
+        <img src="img/Enxaguante Bucal Colgate Total 12 Hálito Saudável 500ml.jpeg" alt="">
+        <h3>Enxaguante Bucal Colgate Total 12 Hálito Saudável 500ml</h3>
+        <p>R$ 6,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="item-farmacia">
+        <img src="img/Pomada que ajuda combater e clarear  cravos e espinhas.jpeg" alt="">
+        <h3>Pomada que ajuda combater e clarear cravos e espinhas</h3>
+        <p>R$ 14,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="item-farmacia">
+        <img src="img/Oximetro de pulso (05) - Multilaser.jpeg" alt="Oximetro">
+        <h3>Oximetro</h3>
+        <p>R$ 47,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+
+      <div class="item-farmacia">
+        <img src="img/Analgésico Dorflex 24 Comprimidos.jpeg" alt="Analgésico Dorflex">
+        <h3>Analgésico Dorflex</h3>
+        <p>R$ 9,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="item-farmacia">
+        <img src="img/fraldas.jpeg" alt="Fraldas">
+        <h3>Fraldas Pampers</h3>
+        <p>R$ 19,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="item-farmacia">
+        <img src="img/buscopan.jpeg" alt="buscopan">
+        <h3>Buscopan</h3>
+        <p>R$ 10,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="item-farmacia">
+        <img src="img/Viter C 1g Sabor Laranja 10 Comprimidos Efervescentes.jpeg" alt="vite C">
+        <h3>Viter C 1g Sabor Laranja 10 Comprimidos Efervescentes</h3>
+        <p>R$ 7,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="item-farmacia">
+        <img src="img/Decongex Plus Solução Gotas 20ml.jpeg" alt="Decongex Plus">
+        <h3>Decongex Plus Solução Gotas 20ml</h3>
+        <p>R$ 15,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="item-farmacia">
+        <img src="img/Off.jpeg" alt="REPELENTE">
+        <h3>Repelente off!</h3>
+        <p>R$ 12,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+    </div>
+    <button class="btn-farmacia next">❯</button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const track = document.querySelector(".carrossel-farmacia-track");
+      const btnPrev = document.querySelector(".btn-farmacia.prev");
+      const btnNext = document.querySelector(".btn-farmacia.next");
+
+      const itensPorVez = 6;
+      const totalItens = document.querySelectorAll(".item-farmacia").length;
+      const totalSlides = Math.ceil(totalItens / itensPorVez);
+      let slideAtual = 0;
+
+      function atualizarCarrossel() {
+        const largura = document.querySelector(".carrossel-farmacia").offsetWidth;
+        track.style.transform = `translateX(-${slideAtual * largura}px)`;
+      }
+
+      function proximoSlide() {
+        slideAtual = (slideAtual + 1) % totalSlides;
+        atualizarCarrossel();
+      }
+
+      function slideAnterior() {
+        slideAtual = (slideAtual - 1 + totalSlides) % totalSlides;
+        atualizarCarrossel();
+      }
+
+      btnNext.addEventListener("click", proximoSlide);
+      btnPrev.addEventListener("click", slideAnterior);
+
+      let intervalo = setInterval(proximoSlide, 4000);
+
+      const container = document.querySelector(".carrossel-farmacia");
+      container.addEventListener("mouseenter", () => clearInterval(intervalo));
+      container.addEventListener("mouseleave", () => {
+        intervalo = setInterval(proximoSlide, 4000);
+      });
+
+      window.addEventListener("resize", atualizarCarrossel);
+    });
+  </script>
+
+  <div class="banner">
+    <img src="img/foto1.jpg" alt="foto do produto ">
+    <img src="img/foto2.jpg" alt="2 foto do banner">
+  </div>
+  
+ <!-- segundo carrosel -->
+    <div class="carrossel-produtos">
+       <h2>Leve mais por muito menos,aproveite!</h2> 
+    <button class="btn-produtos prev">❮</button>
+    <div class="carrossel-produtos-track">
+
+      <div class="item-produtos">
+        <img src="img/melatonina.jpg" alt="Melatonina">
+        <h3>Melatonina 
+          leve 2 caixas e pague 1</h3>
+        <p>R$ 9,90</p>
+        <button class="btn-vendas">Comprar</button>
+      </div>
+      <div class="item-produtos">
+        <img src="img/Alcool em gel.jpg" alt="Alcool em gel 70%">
+        <h3>Alcool em gel 70, leve 3 pague 2</h3>
+        <p>R$ 7,50</p>
+        <button class="btn-vendas">Comprar</button>
+      </div>
+      <div class="item-produtos">
+        <img src="img/gelol.jpg" alt="Gelol">
+        <h3>Gelol 
+          leve 4 pague 3
+        </h3>
+        <p>R$ 10,90</p>
+        <button class="btn-vendas">Comprar</button>
+      </div>
+      <div class="item-produtos">
+        <img src="img/Estomazil.jpg" alt="Estomazil">
+        <h3>Estomazil
+          leve 2 pague 1
+        </h3>
+        <p>R$ 5,90</p>
+        <button class="btn-vendas">Comprar</button>
+      </div>
+      <div class="item-produtos">
+        <img src="img/simetricona.jpg" alt="Simeticona">
+        <h3>Simeticona
+          leve 3 pague 2
+        </h3>
+        <p>R$ 7,00</p>
+        <button class="btn-vendas">Comprar</button>
+      </div>
+      <div class="item-produtos">
+        <img src="img/Saint motel.jpg" alt="Saint motel">
+        <h3>Saint motel
+          leve 2 pague 1
+        </h3>
+        <p>R$ 12,90</p>
+        <button class="btn-vendas">Comprar</button>
+      </div>
+
+      <!-- Grupo 0.2 -->
+      <div class="item-produtos">
+        <img src="img/cafalexina.jpg" alt="Cefalexina">
+        <h3>Cefalexina
+          leve 3 pague 2
+        </h3>
+        <p>R$ 12,90</p>
+        <button class="btn-vendas">Comprar</button>
+      </div>
+      <div class="item-produtos">
+        <img src="img/lavitan.jpg" alt="lavitan">
+        <h3>lavitan
+          Leve 1 pague 2
+        </h3>
+        <p>R$ 6,90</p>
+        <button class="btn-vendas">Comprar</button>
+      </div>
+      <div class="item-produtos">
+        <img src="img/Ibuprofeno 50mg_Ml Medley Sabor Frutas Frasco 30ml.jpeg" alt="Ibuprofeno">
+        <h3>Ibuprofeno 50mg
+          leve 2 pague 1
+        </h3>
+        <p>R$ 8,50</p>
+        <button class="btn-vendas">Comprar</button>
+      </div>
+      <div class="item-produtos">
+        <img src="img/Benegrip.jpg" alt="Benegrip">
+        <h3>Benegrip
+          leve 2 pague 1
+        </h3>
+        <p>R$ 7,90</p>
+        <button class="btn-vendas">Comprar</button>
+      </div>
+      <div class="item-produtos">
+        <img src="img/loção deo-hindratante.jpg" alt="Loção Deo-Hidratante">
+        <h3>Loção Deo-Hidratante
+          leve 2 pague 1
+        </h3>
+        <p>R$ 20,90</p>
+        <button class="btn-vendas">Comprar</button>
+      </div>
+      <div class="item-produtos">
+        <img src="img/Oximetro de pulso (05) - Multilaser.jpeg" alt="Oximetro">
+        <h3>Band-aid
+          Leve 1 pague 2
+        </h3>
+        <p>R$ 5,90</p>
+        <button class="btn-vendas">Comprar</button>
+      </div>
+      <button class="btn-produtos next">❯</button>
+    </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const track = document.querySelector(".carrossel-produtos-track");
+      const btnPrev = document.querySelector(".btn-produtos.prev");
+      const btnNext = document.querySelector(".btn-produtos.next");
+
+      const itensPorVez = 6;
+      const totalItens = document.querySelectorAll(".item-produtos").length;
+      const totalSlides = Math.ceil(totalItens / itensPorVez);
+      let slideAtual = 0;
+
+      function atualizarCarrossel() {
+        const largura = document.querySelector(".carrossel-produtos").offsetWidth;
+        track.style.transform = `translateX(-${slideAtual * largura}px)`;
+      }
+
+      function proximoSlide() {
+        slideAtual = (slideAtual + 1) % totalSlides;
+        atualizarCarrossel();
+      }
+
+      function slideAnterior() {
+        slideAtual = (slideAtual - 1 + totalSlides) % totalSlides;
+        atualizarCarrossel();
+      }
+
+      btnNext.addEventListener("click", proximoSlide);
+      btnPrev.addEventListener("click", slideAnterior);
+
+      let intervalo = setInterval(proximoSlide, 4000);
+
+      const container = document.querySelector(".carrossel-produtos");
+      container.addEventListener("mouseenter", () => clearInterval(intervalo));
+      container.addEventListener("mouseleave", () => {
+        intervalo = setInterval(proximoSlide, 4000);
+      });
+
+      window.addEventListener("resize", atualizarCarrossel);
+    });
+  </script>
+
+  
+   <!-- terceiro carrosel -->
+  <div class="carrossel-coisas">
+    <h2>Mais populares</h2>
+    <button class="btn-vender prev">❮</button>
+    <div class="carrossel-coisas-track">
+
+        
+      <div class="item-coisas">
+        <img src="img/termometro.jpg" alt="Termômetro">
+        <h3>Termômetro Digital</h3>
+         <p class="preco-antigo">R$ 60,90</p>
+        <p class="preco-novo">R$ 45,90</p>
+
+        <button class="btn-vender">Comprar</button>
+      </div>
+      <div class="item-coisas">
+        <img src="img/vick.jpg" alt="vick">
+        <h3>vick</h3>
+         <p class="preco-antigo">R$ 12,90</p>
+        <p class="preco-novo">R$ 5,90</p>
+
+        <button class="btn-vender">Comprar</button>
+      </div>
+      <div class="item-coisas">
+        <img src="img/esparadapo.jpg" alt="Esparadrapo">
+        <h3> Esparadrapo</h3>
+         <p class="preco-antigo">R$ 9,90</p>
+        <p class="preco-novo">R$ 4,90</p>
+        
+        <button class="btn-vender">Comprar</button>
+      </div>
+      <div class="item-coisas">
+        <img src="img/lenço.jpg" alt="Lenço ">
+        <h3>Lenço umedecido</h3>
+         <p class="preco-antigo">R$ 19,90</p>
+        <p class="preco-novo">R$ 12,90</p>
+        
+        <button class="btn-vender">Comprar</button>
+      </div>
+      <div class="item-coisas">
+        <img src="img/serum.jpg" alt="">
+        <h3>Sérum</h3>
+         <p class="preco-antigo">R$ 29,90</p>
+        <p class="preco-novo">R$ 15,90</p>
+        
+        <button class="btn-vender">Comprar</button>
+      </div>
+      <div class="item-coisas">
+        <img src="img/Hidradante em gel.jpg" alt="Hidratante em gel">
+        <h3>Hidratante em gel nivea</h3>
+         <p class="preco-antigo">R$ 39,90</p>
+        <p class="preco-novo">R$ 20,90</p>
+        
+        <button class="btn-vender">Comprar</button>
+      </div>
+
+
+      <div class="item-coisas">
+        <img src="img/Hidratante Labial Nivea Original Care 4,8g.jpeg" alt="Hidratante Labial Nivea Original Care">
+        <h3>Hidratante Labial Nivea Original Care</h3>
+         <p class="preco-antigo">R$ 24,90</p>
+        <p class="preco-novo">R$ 16,90</p>
+        
+        <button class="btn-vender">Comprar</button>
+      </div>
+      <div class="item-coisas">
+        <img src="img/undefined.jpeg" alt="Motrin">
+        <h3>Motrin</h3>
+         <p class="preco-antigo">R$ 21,90</p>
+        <p class="preco-novo">R$ 15,90</p>
+        
+        <button class="btn-vender">Comprar</button>
+      </div>
+      <div class="item-coisas">
+        <img src="img/buscopan.jpeg" alt="buscopan">
+        <h3>Buscopan</h3>
+         <p class="preco-antigo">R$ 29,90</p>
+        <p class="preco-novo">R$ 17,90</p>
+        
+        <button class="btn-vender">Comprar</button>
+      </div>
+      <div class="item-coisas">
+        <img src="img/download.jpeg" alt="Desodorante">
+        <h3>Desodorante Dove</h3>
+         <p class="preco-antigo">R$ 22,90</p>
+        <p class="preco-novo">R$ 18,90</p>
+        <button class="btn-vender">Comprar</button>
+      </div>
+      <div class="item-coisas">
+        <img src="img/leite.jpg" alt="leite">
+        <h3>Nan Comfort 1</h3>
+         <p class="preco-antigo">R$ 79,90</p>
+        <p class="preco-novo">R$ 55,90</p>
+        <button class="btn-vender">Comprar</button>
+      </div>
+      <div class="item-coisas">
+        <img src="img/Sign in.jpeg" alt="REPELENTE">
+        <h3>Adesivos para espinhas</h3>
+        <p class="preco-antigo">R$ 29,90</p>
+        <p class="preco-novo">R$ 20,90</p>
+        <button class="btn-vender">Comprar</button>
+      </div>
+    </div>
+    <button class="btn-vender next">❯</button>
+  </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const track = document.querySelector(".carrossel-coisas-track");
+      const btnPrev = document.querySelector(".btn-vender.prev");
+      const btnNext = document.querySelector(".btn-vender.next");
+
+      const itensPorVez = 6;
+      const totalItens = document.querySelectorAll(".item-coisas").length;
+      const totalSlides = Math.ceil(totalItens / itensPorVez);
+      let slideAtual = 0;
+
+      function atualizarCarrossel() {
+        const largura = document.querySelector(".carrossel-coisas").offsetWidth;
+        track.style.transform = `translateX(-${slideAtual * largura}px)`;
+      }
+
+      function proximoSlide() {
+        slideAtual = (slideAtual + 1) % totalSlides;
+        atualizarCarrossel();
+      }
+
+      function slideAnterior() {
+        slideAtual = (slideAtual - 1 + totalSlides) % totalSlides;
+        atualizarCarrossel();
+      }
+
+      btnNext.addEventListener("click", proximoSlide);
+      btnPrev.addEventListener("click", slideAnterior);
+
+      let intervalo = setInterval(proximoSlide, 4000);
+
+      const container = document.querySelector(".carrossel-coisas");
+      container.addEventListener("mouseenter", () => clearInterval(intervalo));
+      container.addEventListener("mouseleave", () => {
+        intervalo = setInterval(proximoSlide, 4000);
+      });
+
+      window.addEventListener("resize", atualizarCarrossel);
+    });
+  </script>
+
+  <footer class="footer">
+  <div class="footer-container">
+
+    
+    <div class="footer-section">
+      <h3>Envie sua Receita Médica</h3>
+      <form class="receita-form">
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu e-mail" required>
+        <input type="file" accept=".jpg,.jpeg,.png,.pdf" required>
+        <button type="submit">Enviar Receita</button>
+      </form>
+    </div>
+
+    <!-- Parte 2: Links institucionais -->
+    <div class="footer-section">
+      <h3>Institucional</h3>
+      <ul>
+        <li><a href="#">Quem somos</a></li>
+        <li><a href="#">Nossas lojas</a></li>
+        <li><a href="#">Trabalhe conosco</a></li>
+        <li><a href="#">Política de privacidade</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Atendimento</h3>
+      <ul>
+        <li><a href="#">Fale conosco</a></li>
+        <li><a href="#">Trocas e devoluções</a></li>
+        <li><a href="#">Central de ajuda</a></li>
+      </ul>
+      <div class="social">
+        <button>WhatsApp</button>
+        <button>E-mail</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Farmácia BioPharma - Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+</body>
+
+</html>

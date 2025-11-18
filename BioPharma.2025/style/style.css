@@ -25,23 +25,23 @@
 }
 
 body {
-  font-family: var(--font-family);
-  background-color: var(--white);
-  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #333;
   overflow-x: hidden;
   line-height: 1.6;
 }
 
 /* CABEÇALHO*/
 header {
-  background-color: var(--primary-color);
-  color: var(--white);
+  background-color: #228b22;
+  color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
   flex-wrap: wrap;
-  box-shadow: 0 4px 8px var(--shadow);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logo-area {
@@ -70,26 +70,26 @@ header {
 }
 
 .user-area a {
-  color: var(--white);
+  color: #ffffff;
   text-decoration: underline;
   font-weight: bold;
-  transition: var(--transition-fast);
+  transition: 0.3s ease;
 }
 
 .user-area a:hover,
 .user-area a:focus {
-  color: var(--light-green);
+  color: #e9ffe9;
 }
 
 .carrinho {
-  background-color: var(--white);
-  color: var(--primary-color);
+  background-color: #ffffff;
+  color: #228b22;
   border: none;
   font-size: 22px;
   cursor: pointer;
-  border-radius: var(--border-radius);
+  border-radius: 8px;
   padding: 8px;
-  transition: var(--transition-fast);
+  transition: 0.3s ease;
 }
 
 .carrinho:hover,
@@ -101,25 +101,25 @@ header {
 /* 
 MENU E CATEGORIAS*/
 .categorias-container {
-  background: var(--light-bg);
+  background: #f9f9f9;
   padding: 12px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid #228b22;
   position: relative;
 }
 
 #categorias-btn {
-  background-color: var(--primary-color);
-  color: var(--white);
+  background-color: #228b22;
+  color: #ffffff;
   border: none;
   padding: 10px 18px;
   font-size: 13px;
   cursor: pointer;
-  border-radius: var(--border-radius);
-  transition: var(--transition-fast);
+  border-radius: 8px;
+  transition: 0.3s ease;
   position: relative;
   overflow: hidden;
 }
@@ -142,15 +142,15 @@ MENU E CATEGORIAS*/
 
 .menu-links a {
   margin: 0 10px;
-  color: var(--primary-color);
+  color: #228b22;
   font-weight: bold;
   text-decoration: none;
-  transition: var(--transition-fast);
+  transition: 0.3s ease;
 }
 
 .menu-links a:hover,
 .menu-links a:focus {
-  color: var(--primary-hover);
+  color: #145c14;
   text-decoration: underline;
 }
 
@@ -162,29 +162,29 @@ MENU E CATEGORIAS*/
 
 #search {
   padding: 8px;
-  border-radius: var(--border-radius);
+  border-radius: 8px;
   border: 1px solid var(--border-color);
   outline: none;
-  transition: var(--transition-fast);
+  transition: 0.3s ease;
 }
 
 #search:focus {
-  border-color: var(--primary-color);
+  border-color: #228b22;
 }
 
 #search-btn {
-  background-color: var(--primary-color);
-  color: var(--white);
+  background-color: #228b22;
+  color: #ffffff;
   border: none;
   padding: 8px 12px;
-  border-radius: var(--border-radius);
+  border-radius: 8px;
   cursor: pointer;
-  transition: var(--transition-fast);
+  transition: 0.3s ease;
 }
 
 #search-btn:hover,
 #search-btn:focus {
-  background-color: var(--primary-hover);
+  background-color: #145c14;
   box-shadow: 0 0 8px #32cd32;
 }
 
@@ -192,23 +192,23 @@ MENU E CATEGORIAS*/
 .categorias-lista {
   display: none;
   position: absolute;
-  background-color: var(--white);
+  background-color: #ffffff;
   border: 1px solid var(--border-color);
   width: 220px;
   top: 100%;
   left: 30px;
   list-style: none;
-  border-radius: var(--border-radius);
+  border-radius: 8px;
   z-index: 10;
-  box-shadow: 0 4px 12px var(--shadow);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .categorias-lista li a {
   display: block;
   padding: 12px;
-  color: var(--primary-color);
+  color: #228b22;
   text-decoration: none;
-  transition: background var(--transition-fast);
+  transition: background 0.3s ease;
 }
 
 .categorias-lista li a:hover,
@@ -220,7 +220,7 @@ MENU E CATEGORIAS*/
 .faixa-categorias {
   display: flex;
   justify-content: center;
-  background: var(--light-green);
+  background: #e9ffe9;
   padding: 20px;
   overflow-x: auto;
 }
@@ -239,13 +239,13 @@ MENU E CATEGORIAS*/
 
 .item {
   text-align: center;
-  background: var(--white);
+  background: #ffffff;
   border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
+  border-radius: 8px;
   padding: 16px;
   width: 100px;
   flex-shrink: 0;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .item:hover,
@@ -304,8 +304,8 @@ MENU E CATEGORIAS*/
   width: 580px;
   height: 280px;
   object-fit: cover;
-  border-radius: var(--border-radius);
-  transition: transform var(--transition-fast);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
 .imagem-foto:hover {
@@ -321,7 +321,7 @@ main {
   padding: 50px;
   flex-wrap: wrap;
   gap: 20px;
-  background: var(--light-bg);
+  background: #f9f9f9;
 }
 
 .frete-gratis,
@@ -332,11 +332,11 @@ main {
   display: flex;
   align-items: center;
   gap: 15px;
-  background: var(--white);
+  background: #ffffff;
   padding: 18px;
-  border-radius: var(--border-radius);
-  box-shadow: 0 2px 5px var(--shadow);
-  transition: var(--transition-fast);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
 }
 
 .frete-gratis:hover,
@@ -345,7 +345,7 @@ main {
 .cartao-parcelado:hover,
 .compra-segura:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 10px var(--shadow);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .frete-gratis .icon,
@@ -361,7 +361,7 @@ main {
 .atendimento-24h .text a,
 .cartao-parcelado .text a,
 .compra-segura .text a {
-  color: var(--primary-color);
+  color: #228b22;
   text-decoration: none;
   font-weight: bold;
 }
@@ -380,7 +380,7 @@ main {
 .cartao-parcelado .text span,
 .compra-segura .text span {
   font-size: 0.9rem;
-  color: var(--text-color);
+  color: #333;
 }
 
 /*CARROSSEL DE PRODUTOS (GERAL)*/
@@ -394,7 +394,7 @@ main {
 }
 
 h2 {
-  color: var(--primary-color);
+  color: #228b22;
   margin-bottom: 12px;
   text-align: center;
   font-size: 1.8rem;
@@ -411,14 +411,14 @@ h2 {
 .item-farmacia,
 .item-produtos,
 .item-coisas {
-  background: var(--white);
+  background: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: 14px;
   padding: 12px;
   text-align: center;
   width: 180px;
   flex-shrink: 0;
-  transition: all var(--transition-fast);
+  transition: all 0.3s ease;
 }
 
 .item-farmacia:hover,
@@ -437,8 +437,8 @@ h2 {
   width: 100%;
   aspect-ratio: 16 / 9; 
   object-fit: cover;
-  border-radius: var(--border-radius);
-  transition: transform var(--transition-fast);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
 .item-farmacia img:hover,
@@ -466,7 +466,7 @@ h2 {
 }
 
 .preco-novo {
-  color: var(--primary-color);
+  color: #228b22;
   font-weight: bold;
 }
 
@@ -499,14 +499,14 @@ h2 {
   position: absolute;
   top: 40%;
   transform: translateY(-70%);
-  background-color: var(--primary-color);
-  color: var(--white);
+  background-color: #228b22;
+  color: #ffffff;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 40%;
   font-size: 12px;
-  transition: background var(--transition-fast), box-shadow var(--transition-fast);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-farmacia:hover,
@@ -515,7 +515,7 @@ h2 {
 .btn-farmacia:focus,
 .btn-produtos:focus,
 .btn-vender:focus {
-  background-color: var(--primary-hover);
+  background-color: #145c14;
   box-shadow: 0 0 12px #32cd32;
 }
 
@@ -535,8 +535,8 @@ h2 {
 .btn-comprar,
 .btn-vendas,
 .btn-vender {
-  background-color: var(--primary-color);
-  color: var(--white);
+  background-color: #228b22;
+  color: #ffffff;
   border: none;
   padding: 8px 14px;
   border-radius: 6px;
@@ -544,7 +544,7 @@ h2 {
   margin-top: 6px;
   position: relative;
   overflow: hidden;
-  transition: background var(--transition-fast);
+  transition: background 0.3s ease;
 }
 
 .btn-comprar::after,
@@ -582,8 +582,8 @@ h2 {
   width: 600px;
   height: 300px;
   object-fit: cover;
-  border-radius:var(--border-radius);
-  transition: transform var(--transition-fast);
+  border-radius:8px;
+  transition: transform 0.3s ease;
 }
 
 .banner img:hover {
@@ -592,8 +592,8 @@ h2 {
 
 /* RODAPE*/
 .footer {
-  background-color: var(--primary-color);
-  color: var(--white);
+  background-color: #228b22;
+  color: #ffffff;
   padding: 40px 20px 20px;
   margin-top: 40px;
 }
@@ -607,7 +607,7 @@ h2 {
 
 .footer-section h3 {
   margin-bottom: 10px;
-  border-bottom: 2px solid var(--white);
+  border-bottom: 2px solid #ffffff;
   padding-bottom: 5px;
 }
 
@@ -620,9 +620,9 @@ h2 {
 }
 
 .footer-section a {
-  color: var(--white);
+  color: #ffffff;
   text-decoration: none;
-  transition: var(--transition-fast);
+  transition: 0.3s ease;
 }
 
 .footer-section a:hover,
@@ -642,43 +642,43 @@ h2 {
 }
 
 .receita-form input:focus {
-  border: 1px solid var(--white);
+  border: 1px solid #ffffff;
 }
 
 .receita-form button {
-  background: var(--white);
-  color: var(--primary-color);
+  background: #ffffff;
+  color: #228b22;
   cursor: pointer;
   font-weight: bold;
-  transition: var(--transition-fast);
+  transition: 0.3s ease;
 }
 
 .receita-form button:hover,
 .receita-form button:focus {
-  background-color: var(--light-green);
+  background-color: #e9ffe9;
 }
 
 .social button {
-  background: var(--white);
-  color: var(--primary-color);
+  background: #ffffff;
+  color: #228b22;
   border: none;
   padding: 8px 10px;
   margin: 5px;
-  border-radius: var(--border-radius);
+  border-radius: 8px;
   cursor: pointer;
-  transition: var(--transition-fast);
+  transition: 0.3s ease;
 }
 
 .social button:hover,
 .social button:focus {
-  background-color: var(--light-green);
+  background-color: #e9ffe9;
 }
 
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid var(--white);
+  border-top: 1px solid #ffffff;
 }
 
 /*RESPONSIVIDADE*/
